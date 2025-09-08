@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Trip Planner - Jharkhand Tourism</title>
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&amp;family=Teko:wght@300..700&amp;display=swap" rel="stylesheet"/>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="./css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-[var(--background-color)]" style='font-family: "Public Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-yellow-200 bg-[var(--background-color)]/80 px-10 py-4 backdrop-blur-sm">
+<div class="flex items-center gap-3">
+<button onclick="history.back()" class="flex items-center justify-center rounded-full px-4 py-2 bg-[var(--primary-color)] text-white hover:bg-amber-600 transition-colors font-medium">
+<span class="material-symbols-outlined">arrow_back</span>
+Back
+</button>
+<div class="size-8 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[var(--secondary-color)] text-xl font-bold leading-tight tracking-tight">AI Trip Planner</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-[var(--secondary-color)]">
+<a class="text-base font-medium hover:text-[var(--primary-color)] transition-colors" href="index.html">Home</a>
+<a class="text-base font-medium hover:text-[var(--primary-color)] transition-colors" href="#">Destinations</a>
+<a class="text-base font-medium hover:text-[var(--primary-color)] transition-colors" href="market.html">MarketPlace</a>
+<a class="text-base font-medium hover:text-[var(--primary-color)] transition-colors" href="hotels.html">Hotels</a>
+<a class="text-base font-medium hover:text-[var(--primary-color)] transition-colors" href="itenary.html">AIplanner</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="flex items-center justify-center rounded-full px-4 py-2 text-[var(--secondary-color)] hover:bg-yellow-100 transition-colors font-medium" href="login.html?form=login">Login</a>
+<a class="flex items-center justify-center rounded-full bg-[var(--primary-color)] px-4 py-2 text-white hover:bg-amber-600 transition-colors font-medium" href="login.html?form=signup">Sign Up</a>
+<div class="relative">
+<select class="block w-full bg-white border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded-full leading-tight focus:outline-none focus:bg-white focus:border-gray-500 hover:text-[var(--primary-color)] cursor-pointer">
+<option>English</option>
+<option>Hindi</option>
+</select>
+</div>
+</div>
+</header>
+<main class="flex-1 py-8">
+<div class="max-w-7xl mx-auto p-4">
+<h2 class="text-4xl font-bold text-[var(--secondary-color)] mb-4">Tell us your travel preferences 🏞️✨</h2>
+<p class="mb-8 text-stone-600">Just provide some basic information, and our AI trip planner will generate a customized itinerary for you.</p>
+
+<div class="space-y-6">
+<div>
+<label class="block text-lg font-semibold text-[var(--secondary-color)] mb-2">What is your destination of choice?</label>
+<select id="destination" class="form-select w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]/50">
+<option value="">Select...</option>
+<option>Ranchi</option>
+<option>Netarhat</option>
+<option>Betla National Park</option>
+<option>Deoghar</option>
+</select>
+</div>
+
+<div>
+<label class="block text-lg font-semibold text-[var(--secondary-color)] mb-2">How many days are you planning your trip?</label>
+<input type="number" id="days" placeholder="e.g. 4" class="form-input w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]/50"/>
+</div>
+
+<div>
+<label class="block text-lg font-semibold text-[var(--secondary-color)] mb-2">What is Your Budget?</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="budget-options">
+<div class="option-card flex flex-col items-center justify-center rounded-xl border-2 border-transparent bg-stone-50 p-6 text-center shadow-sm transition-all duration-300 hover:border-[var(--primary-color)] hover:bg-stone-100 cursor-pointer" onclick="selectOption(this, 'budget')">
+<span class="text-4xl mb-2">💸</span>
+<b class="text-lg text-[var(--secondary-color)]">Cheap</b>
+<p class="text-sm text-stone-600">Stay conscious of costs</p>
+</div>
+<div class="option-card flex flex-col items-center justify-center rounded-xl border-2 border-transparent bg-stone-50 p-6 text-center shadow-sm transition-all duration-300 hover:border-[var(--primary-color)] hover:bg-stone-100 cursor-pointer" onclick="selectOption(this, 'budget')">
+<span class="text-4xl mb-2">💰</span>
+<b class="text-lg text-[var(--secondary-color)]">Moderate</b>
+<p class="text-sm text-stone-600">Keep costs average</p>
+</div>
+<div class="option-card flex flex-col items-center justify-center rounded-xl border-2 border-transparent bg-stone-50 p-6 text-center shadow-sm transition-all duration-300 hover:border-[var(--primary-color)] hover:bg-stone-100 cursor-pointer" onclick="selectOption(this, 'budget')">
+<span class="text-4xl mb-2">💎</span>
+<b class="text-lg text-[var(--secondary-color)]">Luxury</b>
+<p class="text-sm text-stone-600">No limits on comfort</p>
+</div>
+</div>
+</div>
+
+<div>
+<label class="block text-lg font-semibold text-[var(--secondary-color)] mb-2">Who are you traveling with?</label>
+<div class="grid grid-cols-1 sm:grid-cols-4 gap-4" id="group-options">
+<div class="option-card flex flex-col items-center justify-center rounded-xl border-2 border-transparent bg-stone-50 p-6 text-center shadow-sm transition-all duration-300 hover:border-[var(--primary-color)] hover:bg-stone-100 cursor-pointer" onclick="selectOption(this, 'group')">
+<span class="text-4xl mb-2">🧍</span>
+<b class="text-lg text-[var(--secondary-color)]">Just Me</b>
+<p class="text-sm text-stone-600">Solo exploration</p>
+</div>
+<div class="option-card flex flex-col items-center justify-center rounded-xl border-2 border-transparent bg-stone-50 p-6 text-center shadow-sm transition-all duration-300 hover:border-[var(--primary-color)] hover:bg-stone-100 cursor-pointer" onclick="selectOption(this, 'group')">
+<span class="text-4xl mb-2">❤️</span>
+<b class="text-lg text-[var(--secondary-color)]">A Couple</b>
+<p class="text-sm text-stone-600">Romantic getaway</p>
+</div>
+<div class="option-card flex flex-col items-center justify-center rounded-xl border-2 border-transparent bg-stone-50 p-6 text-center shadow-sm transition-all duration-300 hover:border-[var(--primary-color)] hover:bg-stone-100 cursor-pointer" onclick="selectOption(this, 'group')">
+<span class="text-4xl mb-2">👨‍👩‍👧‍👦</span>
+<b class="text-lg text-[var(--secondary-color)]">Family</b>
+<p class="text-sm text-stone-600">Fun with loved ones</p>
+</div>
+<div class="option-card flex flex-col items-center justify-center rounded-xl border-2 border-transparent bg-stone-50 p-6 text-center shadow-sm transition-all duration-300 hover:border-[var(--primary-color)] hover:bg-stone-100 cursor-pointer" onclick="selectOption(this, 'group')">
+<span class="text-4xl mb-2">⛵</span>
+<b class="text-lg text-[var(--secondary-color)]">Friends</b>
+<p class="text-sm text-stone-600">Thrill-seeking group</p>
+</div>
+</div>
+</div>
+</div>
+
+<button onclick="generateTrip()" class="mt-8 w-full rounded-lg bg-[var(--primary-color)] p-4 text-xl font-semibold text-white transition-colors hover:bg-amber-600">Generate Trip</button>
+
+<div id="loading" class="mt-8 text-center text-lg text-[var(--secondary-color)]">
+<div class="spinner mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-4 border-gray-300 border-t-[var(--primary-color)]"></div>
+AI is preparing your itinerary...
+</div>
+
+<div id="itinerary" class="mt-8 rounded-xl border border-yellow-200 bg-stone-50 p-6 text-[var(--text-color)]">
+<h2 class="text-3xl font-bold text-[var(--primary-color)] mb-4"></h2>
+<h3 class="text-xl font-semibold text-[var(--secondary-color)] mt-4"></h3>
+<ul class="list-disc list-inside space-y-2"></ul>
+</div>
+</div>
+</main>
+<footer class="bg-black text-white py-12 px-4 sm:px-6 lg:px-8 mt-12">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="size-10 flex items-center justify-center rounded-full bg-[var(--primary-color)] text-white text-xl font-bold">J</div>
+<div>
+<h3 class="text-xl font-bold">Jharkhand Tourism</h3>
+<p class="text-sm text-stone-400">Discover the Land of Forests</p>
+</div>
+</div>
+<p class="text-stone-400 text-sm mb-6">Experience the untouched beauty of Jharkhand - from majestic waterfalls to vibrant tribal culture. Your adventure awaits in India's green heartland.</p>
+<div class="flex space-x-4">
+<a href="#" class="text-stone-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg></a>
+<a href="#" class="text-stone-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.195 7.647c-.663.295-1.378.494-2.128.583.753-.453 1.332-1.169 1.606-2.022-.703.418-1.488.723-2.325.884-.664-.707-1.61-1.152-2.653-1.152-2.011 0-3.64 1.629-3.64 3.64 0 .285.032.56.094.821-3.026-.152-5.71-1.597-7.51-3.774-.313.535-.492 1.158-.492 1.821 0 1.261.642 2.376 1.616 3.029-.594-.019-1.152-.182-1.636-.452v.046c0 1.762 1.255 3.235 2.91 3.567-.306.084-.627.13-.956.13-.234 0-.46-.023-.68-.065.461 1.444 1.8 2.503 3.385 2.531-1.246.975-2.812 1.558-4.522 1.558-.293 0-.58-.016-.86-.05 1.61 1.035 3.523 1.638 5.578 1.638 6.705 0 10.36-5.556 10.36-10.354 0-.158-.004-.316-.01-.472.715-.519 1.334-1.168 1.825-1.916z"></path></svg></a>
+<a href="#" class="text-stone-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 4c-2.715 0-3.195.01-4.22.06A4.05 4.05 0 005.6 1.48C4.545 1.135 3.996.966 3.49.91S2.413.91 1.897 1.48A4.05 4.05 0 00.91 3.49C.855 3.996.845 4.545.8 5.6c-.05 1.025-.06 1.505-.06 4.22s.01 3.195.06 4.22c.055 1.056.225 1.605.57 2.112.355.507.838.99 1.418 1.57.58.58 1.063 1.063 1.57 1.418.507.355 1.056.525 2.112.57 1.025.05 1.505.06 4.22.06s3.195-.01 4.22-.06c1.056-.055 1.605-.225 2.112-.57.507-.355.99-.838 1.57-1.418.58-.58 1.063-1.063 1.418-1.57.355-.507.525-1.056.57-2.112.05-1.025.06-1.505.06-4.22s-.01-3.195-.06-4.22c-.055-1.056-.225-1.605-.57-2.112-.355-.507-.838-.99-1.418-1.57-.58-.58-1.063-1.063-1.57-1.418-.507-.355-1.056-.525-2.112-.57-1.025-.05-1.505-.06-4.22-.06zm.543 2.158c2.457 0 2.76.01 3.733.056 1.002.046 1.64.218 2.054.498.414.28.747.614 1.027.994.28.38.452.713.498 1.027.046.973.056 1.276.056 3.733s-.01 2.76-.056 3.733c-.046 1.002-.218 1.64-.498 2.054-.28.414-.614.747-.994 1.027-.38.28-.713.452-1.027.498-.973.046-1.276.056-3.733.056s-2.76-.01-3.733-.056c-1.002-.046-1.64-.218-2.054-.498-.414-.28-.747-.614-1.027-.994-.28-.38-.452-.713-.498-1.027-.046-.973-.056-1.276-.056-3.733s.01-2.76.056-3.733c.046-1.002.218-1.64.498-2.054.28-.414.614-.747.994-1.027.38-.28.713-.452 1.027-.498.973-.046 1.276-.056 3.733-.056zm0-1.748c-2.827 0-3.21.012-4.247.06-.99.045-1.623.21-2.22.46-.597.25-1.09.584-1.58.983-.49.4-.823.893-1.073 1.49-.25.597-.414 1.23-.458 2.22-.048 1.037-.06 1.42-.06 4.247s.012 3.21.06 4.247c.045.99.21 1.623.46 2.22.25.597.584 1.09.983 1.58.4.4.893.823 1.49 1.073.597.25 1.23.414 2.22.458 1.037.048 1.42.06 4.247.06s3.21-.012 4.247-.06c.99-.045 1.623-.21 2.22-.46.597-.25 1.09-.584 1.58-.983.49-.4.823-.893 1.073-1.49.25-.597.414-1.23.458-2.22.048-1.037-.06-1.42-.06-4.247s-.012-3.21-.06-4.247c-.045-.99-.21-1.623-.46-2.22-.25-.597-.584-1.09-.983-1.58-.4-.4-.893-.823-1.49-1.073-.597-.25-1.23-.414-2.22-.458-1.037-.048-1.42-.06-4.247-.06zM12 7.76c2.33 0 4.24 1.91 4.24 4.24s-1.91 4.24-4.24 4.24-4.24-1.91-4.24-4.24 1.91-4.24 4.24-4.24zm0-1.748c-3.212 0-5.988 2.776-5.988 5.988s2.776 5.988 5.988 5.988 5.988-2.776 5.988-5.988-2.776-5.988-5.988-5.988z" clip-rule="evenodd"></path></svg></a>
+<a href="#" class="text-stone-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19.5 2h-15C2.013 2 0 4.013 0 6.5v11C0 20.987 2.013 23 4.5 23h15c2.487 0 4.5-2.013 4.5-4.5v-11C24 4.013 21.987 2 19.5 2zM9 16V8l7 4-7 4z" clip-rule="evenodd"></path></svg></a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<ul>
+<li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Destinations</a></li>
+<li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Things to Do</a></li>
+<li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Culture</a></li>
+<li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Wildlife</a></li>
+<li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Festivals</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Support</h4>
+<ul>
+<li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Contact Us</a></li>
+<li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Travel Tips</a></li>
+<li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">FAQ</a></li>
+<li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Booking Help</a></li>
+<li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Emergency Numbers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Stay Connected</h4>
+<p class="text-stone-400 text-sm mb-4">Get travel tips, festival updates, and special offers.</p>
+<div class="flex">
+<input type="email" placeholder="Your email" class="w-full p-3 rounded-l-md bg-stone-800 border border-stone-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"/>
+<button class="bg-[var(--primary-color)] text-white px-5 py-3 rounded-r-md hover:bg-amber-600 transition-colors text-sm">Subscribe</button>
+</div>
+<div class="mt-6 space-y-3">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-stone-400 mr-3">phone</span>
+<a href="tel:+91 6512331828" class="text-stone-400 hover:text-white transition-colors">+91 6512331828</a>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-stone-400 mr-3">mail</span>
+<a href="mailto:jtdcltd[at]gmail[dot]com" class="text-stone-400 hover:text-white transition-colors">jtdcltd@gmail.com</a>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-stone-400 mr-3">location_on</span>
+<p class="text-stone-400">Ranchi, Jharkhand, India</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script type="text/javascript">
+(function(d, t) {
+    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    v.onload = function() {
+      window.voiceflow.chat.load({
+        verify: { projectID: '68bbf9f62a89e4f77827c75f' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production',
+        voice: {
+          url: "https://runtime-api.voiceflow.com"
+        }
+      });
+    }
+    v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+})(document, 'script');
+</script>
+</div>
+</body>
+</html>

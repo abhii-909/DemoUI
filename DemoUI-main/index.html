@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&amp;family=Teko:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<title>Jharkhand Tourism</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="./css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-[var(--background-color)]" style='font-family: "Public Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-yellow-200 bg-[var(--background-color)]/80 px-10 py-4 backdrop-blur-sm">
+<div class="flex items-center gap-3">
+<div class="size-8 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[var(--secondary-color)] text-xl font-bold leading-tight tracking-tight">Jharkhand Tourism</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-[var(--secondary-color)]">
+<a class="text-base font-medium hover:text-[var(--primary-color)] transition-colors" href="#">Home</a>
+<a class="text-base font-medium hover:text-[var(--primary-color)] transition-colors" href="#">Destinations</a>
+<a class="text-base font-medium hover:text-[var(--primary-color)] transition-colors" href="market.html">MarketPlace</a>
+<a class="text-base font-medium hover:text-[var(--primary-color)] transition-colors" href="hotels.html">Hotels</a>
+<a class="text-base font-medium hover:text-[var(--primary-color)] transition-colors" href="itenary.html">AIplanner</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="flex items-center justify-center rounded-full px-4 py-2 text-[var(--secondary-color)] hover:bg-yellow-100 transition-colors font-medium" href="login.html?form=login">Login</a>
+<a class="flex items-center justify-center rounded-full bg-[var(--primary-color)] px-4 py-2 text-white hover:bg-amber-600 transition-colors font-medium" href="login.html?form=signup">Sign Up</a>
+<div class="relative">
+<select class="block w-full bg-white border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded-full leading-tight focus:outline-none focus:bg-white focus:border-gray-500 hover:text-[var(--primary-color)] cursor-pointer">
+<option>English</option>
+<option>Hindi</option>
+</select>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<section class="relative flex min-h-[89.5vh] flex-col items-center justify-center bg-cover bg-center bg-no-repeat p-4 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://i.redd.it/oi22qf6rg2911.jpg");'></div>
+<div class="absolute inset-0 bg-black/40"></div>
+<!-- <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'80\' height=\'80\' viewBox=\'0 0 80 80\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23d97706\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); animation: scroll 20s linear infinite;"></div> -->
+<div class="relative z-10 flex flex-col gap-4 text-center text-white">
+<h1 class="text-6xl md:text-8xl font-culture tracking-wider text-shadow-lg" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">Discover Jharkhand</h1>
+<p class="max-w-2xl text-lg md:text-xl font-light" style="margin-bottom: 10%;">Explore the untouched beauty of Jharkhand, where nature and culture intertwine.</p>
+<div class="absolute bottom-[-28px] w-full max-w-2xl px-4 z-20 mt-10">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2" > search </span>
+<input class="form-input w-full rounded-full border-2 border-transparent bg-white py-4 pl-12 pr-4 text-gray-900 shadow-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]/50" placeholder="Where do you want to go? e.g., Waterfalls, Wildlife" type="search"/>
+</div>
+</div>
+</div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <span class="material-symbols-outlined text-white text-4xl">mouse</span>
+</div>
+</section>
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-stone-50">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold text-[var(--secondary-color)] tracking-tight">Top Attractions</h2>
+<p class="mt-2 text-lg text-stone-600 font-handwritten">Discover the most popular destinations in Jharkhand.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group flex flex-col overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white">
+<div class="overflow-hidden relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover group-hover:scale-105 transition-transform duration-500" style='background-image: url("https://static.toiimg.com/photo/msid-85740087,width-96,height-65.cms");'></div>
+<div class="absolute bottom-4 right-4 flex items-center gap-2 bg-white/80 p-2 rounded-full">
+<svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="p-6 flex-1">
+<h3 class="text-xl font-semibold text-[var(--secondary-color)]">Waterfalls</h3>
+<p class="mt-2 text-stone-600">Experience the cascading beauty of Hundru Falls and Jonha Falls.</p>
+</div>
+</div>
+<div class="group flex flex-col overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white">
+<div class="overflow-hidden relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover group-hover:scale-105 transition-transform duration-500" style='background-image: url("https://dalmawildlife.in/ranchi/images/bg/slide(2).jpg");'></div>
+<div class="absolute bottom-4 right-4 flex items-center gap-2 bg-white/80 p-2 rounded-full">
+<svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15.91 8.342a3.75 3.75 0 0 1 2.25 4.664l-4.5 6.75-4.5-6.75a3.75 3.75 0 0 1 2.25-4.664M12 12.75h.008v.008H12v-.008Z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="p-6 flex-1">
+<h3 class="text-xl font-semibold text-[var(--secondary-color)]">Wildlife Sanctuaries</h3>
+<p class="mt-2 text-stone-600">Encounter diverse wildlife in Betla National Park and Dalma Wildlife Sanctuary.</p>
+</div>
+</div>
+<div class="group flex flex-col overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white">
+<div class="overflow-hidden relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover group-hover:scale-105 transition-transform duration-500" style='background-image: url("https://wallpapercave.com/wp/wp2337126.jpg");'></div>
+<div class="absolute bottom-4 right-4 flex items-center gap-2 bg-white/80 p-2 rounded-full">
+<svg class="w-6 h-6 text-cyan-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="p-6 flex-1">
+<h3 class="text-xl font-semibold text-[var(--secondary-color)]">Hill Stations</h3>
+<p class="mt-2 text-stone-600">Relax in the serene hills of Netarhat and Parasnath.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative bg-[var(--background-color)] py-20 px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold text-[var(--secondary-color)] tracking-tight">Cultural Highlights</h2>
+<p class="mt-2 text-lg text-stone-600 font-handwritten">Immerse yourself in the vibrant culture and traditions of Jharkhand.</p>
+</div>
+<div class="flex overflow-x-auto space-x-8 pb-4 -mx-4 px-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden" style="padding-left:9% ;">
+<div class="flex-shrink-0 w-80" >
+<div class="group flex flex-col overflow-hidden rounded-lg">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBb-0TrKlHAFj7PeNMDpjvhSnyCe-BVwMgiXFvTKaQtNgRI2vqIO1NCDGYM9-WDN8h8wvxAmkact3Pu3fTOehchVWVe2F2Z_lqPeHxsdmYDxAznsKndp1qdxpCPt6WJ0Wn10owumHBm-3OjX2XL7jFen6yoaii-sY0WJavDOz8Ypm_wtiPaPu5f4yJhMR5Qf4pRoOgA753pddRCCWfdAfO9lUWy54187drQczgT9JtSlLZjX3J9saSYv53k23v93e9BIcdA8wJooML6");'></div>
+<div class="pt-4 flex items-center">
+<img alt="Tribal Dance Icon" class="w-8 h-8 mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSsDPyHUI463rRYpiahfN3Jr9S66N6GvZ6MaGEN4HBYod2_bde2yH2JgDo0tUJTq6riW5lUdQYiubztzV30hWl9z3CNQ_eZz-8BQlvvsCMHzeKcCGdu6SqK8Bgf_jFy3mPwZYuZkLqOvlYIqJgp9yeLwgSv9tkJ1h6gLGX3e_xhH71UJsyY8U4A1NrMj8t_lKSe6ZKRpLjsgCYkQs-COtnp75UpnhVHp3aeI7n6WMLRhtVNV0Cd3YBK2YI6TbXbYRpRTEJv-jvEw7W"/>
+<div>
+<h3 class="text-xl font-semibold text-[var(--secondary-color)]">Tribal Dance</h3>
+<p class="mt-1 text-stone-600">Experience the vibrant tribal dance forms of Jharkhand.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-80">
+<div class="group flex flex-col overflow-hidden rounded-lg">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg shadow-md" style='background-image: url("https://blogmedia.testbook.com/blog/wp-content/uploads/2023/07/chhauu-dance-b7e2277d.jpg");'></div>
+<div class="pt-4 flex items-center">
+<img alt="Festivals Icon" class="w-8 h-8 mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq7e1QanIy4Bmq-gkTCxpS8IWEguxOHID07ulDXJT-uP8-8F0FwbFvM_usGmCJEZ7SMF6pkznrhrPOqTSoo1tPoBhYS0ORyQ-qakwWrmG-vUxFm2TPL3Vm329AFZNmJsZLoPIXswdMUYC8qiQjH1cAtGEoASBdGoA2GBCR5OZIYyy7z5o3uZM2u-s6vvUMSS0K66nMyv-cV6DE3JTRR0a1oyQMNFWSO4d0dncw0xnPPSvgAJnNRp7L9flUUHLQAsMgrLHZn2ZBtrvC"/>
+<div>
+<h3 class="text-xl font-semibold text-[var(--secondary-color)]">Festival Celebrations</h3>
+<p class="mt-1 text-stone-600">Participate in the colorful festivals that showcase the rich culture.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-80">
+<div class="group flex flex-col overflow-hidden rounded-lg">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg shadow-md" style='background-image: url("https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/terracotta-crafts.jpg");'></div>
+<div class="pt-4 flex items-center">
+<img alt="Art &amp; Craft Icon" class="w-8 h-8 mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8GmfvgF3dkf9ODZr1UX8z4eFsjMxKn810WiGXAk7flKdU6Us4otqNu5oFiCHjFaQK4DiUAr73dLWGStjjtI395CQwZq0QMkJwRL5F6aVilEuTxwZvXOxEUPF_P2Q9NUfIQ2Ae3bFU4aWIBT_NJNSwyNXWQFQ1bGy3TE35qUCxocRKVuD44tXnCL3J3ahrYEsPhqaFJBoMfjDTTbne1KHgZWLZv7_1N6zHPM41R8OZJCMWkrEn0SzheQsl_oMByVy4fpp_qQtPXfMo"/>
+<div>
+<h3 class="text-xl font-semibold text-[var(--secondary-color)]">Local Art &amp; Craft</h3>
+<p class="mt-1 text-stone-600">Discover the intricate art and craft traditions of the region.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+            <div class="flex items-center gap-3 mb-4">
+                <div class="size-10 flex items-center justify-center rounded-full bg-[var(--primary-color)] text-white text-xl font-bold">J</div>
+                <div>
+                    <h3 class="text-xl font-bold">Jharkhand Tourism</h3>
+                    <p class="text-sm text-stone-400">Discover the Land of Forests</p>
+                </div>
+            </div>
+            <p class="text-stone-400 text-sm mb-6">Experience the untouched beauty of Jharkhand - from majestic waterfalls to vibrant tribal culture. Your adventure awaits in India's green heartland.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="text-stone-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg></a>
+                <a href="#" class="text-stone-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.195 7.647c-.663.295-1.378.494-2.128.583.753-.453 1.332-1.169 1.606-2.022-.703.418-1.488.723-2.325.884-.664-.707-1.61-1.152-2.653-1.152-2.011 0-3.64 1.629-3.64 3.64 0 .285.032.56.094.821-3.026-.152-5.71-1.597-7.51-3.774-.313.535-.492 1.158-.492 1.821 0 1.261.642 2.376 1.616 3.029-.594-.019-1.152-.182-1.636-.452v.046c0 1.762 1.255 3.235 2.91 3.567-.306.084-.627.13-.956.13-.234 0-.46-.023-.68-.065.461 1.444 1.8 2.503 3.385 2.531-1.246.975-2.812 1.558-4.522 1.558-.293 0-.58-.016-.86-.05 1.61 1.035 3.523 1.638 5.578 1.638 6.705 0 10.36-5.556 10.36-10.354 0-.158-.004-.316-.01-.472.715-.519 1.334-1.168 1.825-1.916z"></path></svg></a>
+                <a href="#" class="text-stone-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 4c-2.715 0-3.195.01-4.22.06A4.05 4.05 0 005.6 1.48C4.545 1.135 3.996.966 3.49.91S2.413.91 1.897 1.48A4.05 4.05 0 00.91 3.49C.855 3.996.845 4.545.8 5.6c-.05 1.025-.06 1.505-.06 4.22s.01 3.195.06 4.22c.055 1.056.225 1.605.57 2.112.355.507.838.99 1.418 1.57.58.58 1.063 1.063 1.57 1.418.507.355 1.056.525 2.112.57 1.025.05 1.505.06 4.22.06s3.195-.01 4.22-.06c1.056-.055 1.605-.225 2.112-.57.507-.355.99-.838 1.57-1.418.58-.58 1.063-1.063 1.418-1.57.355-.507.525-1.056.57-2.112.05-1.025.06-1.505.06-4.22s-.01-3.195-.06-4.22c-.055-1.056-.225-1.605-.57-2.112-.355-.507-.838-.99-1.418-1.57-.58-.58-1.063-1.063-1.57-1.418-.507-.355-1.056-.525-2.112-.57-1.025-.05-1.505-.06-4.22-.06zm.543 2.158c2.457 0 2.76.01 3.733.056 1.002.046 1.64.218 2.054.498.414.28.747.614 1.027.994.28.38.452.713.498 1.027.046.973.056 1.276.056 3.733s-.01 2.76-.056 3.733c-.046 1.002-.218 1.64-.498 2.054-.28.414-.614.747-.994 1.027-.38.28-.713.452-1.027.498-.973.046-1.276.056-3.733.056s-2.76-.01-3.733-.056c-1.002-.046-1.64-.218-2.054-.498-.414-.28-.747-.614-1.027-.994-.28-.38-.452-.713-.498-1.027-.046-.973-.056-1.276-.056-3.733s.01-2.76.056-3.733c.046-1.002.218-1.64.498-2.054.28-.414.614-.747.994-1.027.38-.28.713-.452 1.027-.498.973-.046 1.276-.056 3.733-.056zm0-1.748c-2.827 0-3.21.012-4.247.06-.99.045-1.623.21-2.22.46-.597.25-1.09.584-1.58.983-.49.4-.823.893-1.073 1.49-.25.597-.414 1.23-.458 2.22-.048 1.037-.06 1.42-.06 4.247s.012 3.21.06 4.247c.045.99.21 1.623.46 2.22.25.597.584 1.09.983 1.58.4.4.893.823 1.49 1.073.597.25 1.23.414 2.22.458 1.037.048 1.42.06 4.247.06s3.21-.012 4.247-.06c.99-.045 1.623-.21 2.22-.46.597-.25 1.09-.584 1.58-.983.49-.4.823-.893 1.073-1.49.25-.597.414-1.23.458-2.22.048-1.037.06-1.42.06-4.247s-.012-3.21-.06-4.247c-.045-.99-.21-1.623-.46-2.22-.25-.597-.584-1.09-.983-1.58-.4-.4-.893-.823-1.49-1.073-.597-.25-1.23-.414-2.22-.458-1.037-.048-1.42-.06-4.247-.06zM12 7.76c2.33 0 4.24 1.91 4.24 4.24s-1.91 4.24-4.24 4.24-4.24-1.91-4.24-4.24 1.91-4.24 4.24-4.24zm0-1.748c-3.212 0-5.988 2.776-5.988 5.988s2.776 5.988 5.988 5.988 5.988-2.776 5.988-5.988-2.776-5.988-5.988-5.988z" clip-rule="evenodd"></path></svg></a>
+                <a href="#" class="text-stone-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19.5 2h-15C2.013 2 0 4.013 0 6.5v11C0 20.987 2.013 23 4.5 23h15c2.487 0 4.5-2.013 4.5-4.5v-11C24 4.013 21.987 2 19.5 2zM9 16V8l7 4-7 4z" clip-rule="evenodd"></path></svg></a>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul>
+                <li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Destinations</a></li>
+                <li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Things to Do</a></li>
+                <li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Culture</a></li>
+                <li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Wildlife</a></li>
+                <li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Festivals</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-lg font-semibold mb-4">Support</h4>
+            <ul>
+                <li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Contact Us</a></li>
+                <li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Travel Tips</a></li>
+                <li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">FAQ</a></li>
+                <li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Booking Help</a></li>
+                <li class="mb-2"><a href="#" class="text-stone-400 hover:text-white transition-colors">Emergency Numbers</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-lg font-semibold mb-4">Stay Connected</h4>
+            <p class="text-stone-400 text-sm mb-4">Get travel tips, festival updates, and special offers.</p>
+            <div class="flex">
+                <input type="email" placeholder="Your email" class="w-full p-3 rounded-l-md bg-stone-800 border border-stone-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"/>
+                <button class="bg-[var(--primary-color)] text-white px-5 py-3 rounded-r-md hover:bg-amber-600 transition-colors text-sm">Subscribe</button>
+            </div>
+            <div class="mt-6 space-y-3">
+                <div class="flex items-center">
+                    <span class="material-symbols-outlined text-stone-400 mr-3">phone</span>
+                    <a href="tel:+91 6512331828" class="text-stone-400 hover:text-white transition-colors">+91 6512331828</a>
+                </div>
+                <div class="flex items-center">
+                    <span class="material-symbols-outlined text-stone-400 mr-3">mail</span>
+                    <a href="mailto:jtdcltd[at]gmail[dot]com" class="text-stone-400 hover:text-white transition-colors">jtdcltd@gmail.com</a>
+                </div>
+                <div class="flex items-center">
+                    <span class="material-symbols-outlined text-stone-400 mr-3">location_on</span>
+                    <p class="text-stone-400">Ranchi, Jharkhand, India</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '68bbf9f62a89e4f77827c75f' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+</body></html>
